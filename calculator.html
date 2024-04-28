@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+    <title>Sparkle Price Estimator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <img class="img" src="Images/logo.png" alt="">
+        <div class="cont">
+            <a class="a1" href="/Index.html">HOME</a>
+            <a class="a2" href="/calculator.html">CALCULATE</a>
+        </div>
+        <a href="login.html" class="btn">Log Out</a>
+    </nav>
+    <div id="cont2">
+        <div class="filter"> <span>CALCULATOR INPUT....</span>
+            <div id="Shape"> SHAPE
+                <div class="shape">
+                    <button class="shapebtn btn1" type="text" id="CUSHION" onclick="Shapef('CUSHION')"
+                        style="background-color: #2e35f2; color: white ;">CUSHION</button>
+                    <button class="shapebtn btn1" type="text" id="OVAL" onclick="Shapef('OVAL')">OVAL</button>
+                    <button class="shapebtn btn1" type="text" id="PEAR" onclick="Shapef('PEAR')">PEAR</button>
+                    <button class="shapebtn btn1" type="text" id="HEART" onclick="Shapef('HEART')">HEART</button>
+                    <button class="shapebtn btn1" type="text" id="EMERALD" onclick="Shapef('EMERALD')">EMERALD</button>
+                    <button class="shapebtn btn1" type="text" id="PRINCESS"
+                        onclick="Shapef('PRINCESS')">PRINCESS</button>
+                    <button class="shapebtn btn1" type="text" id="MARQUISE"
+                        onclick="Shapef('MARQUISE')">MARQUISE</button>
+                    <button class="shapebtn btn1" type="text" id="ROUND" onclick="Shapef('ROUND')">ROUND</button>
+                    <button class="shapebtn btn1" type="text" id="RADIANT" onclick="Shapef('RADIANT')">RADIANT</button>
+                </div>
+            </div>
+            <div class="Weight"> WEIGHT
+                <input class="range" type="range" name="Weight" step="0.01" id="weight_value" value="0.43" min="0"
+                    max="6.5" oninput="rangefnc('weight_value','weight')">
+                <div id="weight">0.43</div>
+            </div>
+            <div class="Length"> LENGTH
+                <input class="range" type="range" name="length" step="0.01" id="length_value" value="4.38" min="0"
+                    max="10.0" oninput="rangefnc('length_value','length')">
+                <div id="length">4.38</div>
+            </div>
+            <div class="Width"> WIDTH
+                <input class="range" type="range" name="width" step="0.01" id="width_value" value="4.34" min="0"
+                    max="10.0" oninput="rangefnc('width_value','width')" on>
+                <div id="width">4.34</div>
+            </div>
+            <div class="Depth"> DEPTH
+                <input class="range" type="range" name="depth" step="0.01" id="depth_value" value="2.72" min="0"
+                    max="10.0" oninput="rangefnc('depth_value','depth')" on>
+                <div id="depth">2.72</div>
+            </div>
+            <div class="advance" id="advance">
+                <div id="Colour"> COLOUR
+                    <div class="colour">
+                        <button class="colourbtn btn1" type="text" id="D" onclick="Colourf('D','D')">D</button>
+                        <button class="colourbtn btn1" type="text" id="E" onclick="Colourf('E','E')">E</button>
+                        <button class="colourbtn btn1" type="text" id="col_F" onclick="Colourf('F','col_F')">F</button>
+                        <button class="colourbtn btn1" type="text" id="FANCY"
+                            onclick="Colourf('FANCY','FANCY')">FANCY</button>
+                        <button class="colourbtn btn1" type="text" id="FBG" onclick="Colourf('FBG','FBG')">FBG</button>
+                        <button class="colourbtn btn1" type="text" id="G" onclick="Colourf('G','G')">G</button>
+                        <button class="colourbtn btn1" type="text" id="H" onclick="Colourf('H','H')">H</button>
+                        <button class="colourbtn btn1" type="text" id="I" onclick="Colourf('I','I')">I</button>
+                        <button class="colourbtn btn1" type="text" id="J" onclick="Colourf('J','J')">J</button>
+                        <button class="colourbtn btn1" type="text" id="K" onclick="Colourf('K','K')">K</button>
+                        <button class="colourbtn btn1" type="text" id="L" onclick="Colourf('L','L')">L</button>
+                        <button class="colourbtn btn1" type="text" id="col_M" onclick="Colourf('M','col_M')"
+                            style="background-color: #2e35f2; color: white ;">M</button>
+                        <button class="colourbtn btn1" type="text" id="N" onclick="Colourf('N','N')">N</button>
+                        <button class="colourbtn btn1" type="text" id="O" onclick="Colourf('O','O')">O</button>
+                        <button class="colourbtn btn1" type="text" id="O-P" onclick="Colourf('O-P','O-P')">O-P</button>
+                        <button class="colourbtn btn1" type="text" id="Q" onclick="Colourf('Q','Q')">Q</button>
+                        <button class="colourbtn btn1" type="text" id="Q-R" onclick="Colourf('Q-R','Q-R')">Q-R</button>
+                        <button class="colourbtn btn1" type="text" id="S-T" onclick="Colourf('S-T','S-T')">S-T</button>
+                        <button class="colourbtn btn1" type="text" id="U-V" onclick="Colourf('U-V','U-V')">U-V</button>
+                        <button class="colourbtn btn1" type="text" id="W" onclick="Colourf('W','W')">W</button>
+                        <button class="colourbtn btn1" type="text" id="W-X" onclick="Colourf('W-X','W-X')">W-X</button>
+                        <button class="colourbtn btn1" type="text" id="Y-Z" onclick="Colourf('Y-Z','Y-Z')">Y-Z</button>
+                    </div>
+                </div>
+                <div id="Cut"> CUT
+                    <div class="cut">
+                        <button class="cutbtn btn1" type="text" id="cut_F" onclick="Cutf('F','cut_F')">F</button>
+                        <button class="cutbtn btn1" type="text" id="cut_GD" onclick="Cutf('GD','cut_GD')">GD</button>
+                        <button class="cutbtn btn1" type="text" id="cut_VG" onclick="Cutf('VG','cut_VG')">VG</button>
+                        <button class="cutbtn btn1" type="text" id="cut_EX" onclick="Cutf('EX','cut_EX')"
+                            style="background-color: #2e35f2; color: white ;">EX</button>
+                    </div>
+                </div>
+                <div id="Clarity"> CLARITY
+                    <div class="clarity">
+                        <button class="claritybtn btn1" type="text" id="FL" onclick="Clarityf('FL','FL')">FL</button>
+                        <button class="claritybtn btn1" type="text" id="I1" onclick="Clarityf('I1','I1')">I1</button>
+                        <button class="claritybtn btn1" type="text" id="I2" onclick="Clarityf('I2','I2')">I2</button>
+                        <button class="claritybtn btn1" type="text" id="I3" onclick="Clarityf('I3','I3')">I3</button>
+                        <button class="claritybtn btn1" type="text" id="IF" onclick="Clarityf('IF','IF')">IF</button>
+                        <button class="claritybtn btn1" type="text" id="SI1" onclick="Clarityf('SI1','SI1')"
+                            style="background-color: #2e35f2; color: white ;">SI1</button>
+                        <button class="claritybtn btn1" type="text" id="SI2"
+                            onclick="Clarityf('SI2','SI2')">SI2</button>
+                        <button class="claritybtn btn1" type="text" id="VS1"
+                            onclick="Clarityf('VS1','VS1')">VS1</button>
+                        <button class="claritybtn btn1" type="text" id="VS2"
+                            onclick="Clarityf('VS2','VS2')">VS2</button>
+                        <button class="claritybtn btn1" type="text" id="VVS1"
+                            onclick="Clarityf('VVS1','VVS1')">VVS1</button>
+                        <button class="claritybtn btn1" type="text" id="VVS2"
+                            onclick="Clarityf('VVS2','VVS2')">VVS2</button>
+                    </div>
+                </div>
+                <div id="Polish"> POLISH
+                    <div class="polish">
+                        <button class="polishbtn btn1" type="text" id="pol_F" onclick="Polishf('F','pol_F')">F</button>
+                        <button class="polishbtn btn1" type="text" id="pol_GD"
+                            onclick="Polishf('GD','pol_GD')">GD</button>
+                        <button class="polishbtn btn1" type="text" id="pol_VG"
+                            onclick="Polishf('VG','pol_VG')">VG</button>
+                        <button class="polishbtn btn1" type="text" id="pol_EX" onclick="Polishf('EX','pol_EX')"
+                            style="background-color: #2e35f2; color: white ;">EX</button>
+                    </div>
+                </div>
+                <div id="Fluorescence"> FLUORESCENCE
+                    <div class="fluorescence">
+                        <button class="fluorescencebtn btn1" type="text" id="flu_F"
+                            onclick="Fluorescencef('F','flu_F')">F</button>
+                        <button class="fluorescencebtn btn1" type="text" id="flu_M" onclick="Fluorescencef('M','flu_M')"
+                            style="background-color: #2e35f2; color: white ;">M</button>
+                        <button class="fluorescencebtn btn1" type="text" id="flu_N"
+                            onclick="Fluorescencef('N','flu_N')">N</button>
+                        <button class="fluorescencebtn btn1" type="text" id="SL"
+                            onclick="Fluorescencef('SL','SL')">SL</button>
+                        <button class="fluorescencebtn btn1" type="text" id="ST"
+                            onclick="Fluorescencef('ST','ST')">ST</button>
+                        <button class="fluorescencebtn btn1" type="text" id="VS"
+                            onclick="Fluorescencef('VS','VS')">VS</button>
+                        <button class="fluorescencebtn btn1" type="text" id="VSL"
+                            onclick="Fluorescencef('VSL','VSL')">VSL</button>
+                    </div>
+                </div>
+                <div id="Symmetry"> SYMMETRY
+                    <div class="symmetry">
+                        <button class="symmetrybtn btn1" type="text" id="FR" onclick="Symmetryf('FR','FR')">FR</button>
+                        <button class="symmetrybtn btn1" type="text" id="sym_GD"
+                            onclick="Symmetryf('GD','sym_GD')">GD</button>
+                        <button class="symmetrybtn btn1" type="text" id="VG" onclick="Symmetryf('VG','VG')"
+                            style="background-color: #2e35f2; color: white ;">VG</button>
+                        <button class="symmetrybtn btn1" type="text" id="sym_EX"
+                            onclick="Symmetryf('EX','sym_EX')">EX</button>
+                    </div>
+                </div>
+            </div>
+            <button class="button" onclick=search()>SUBMIT</button>
+            <div class="option" onclick="advance()">
+                <div class="advancebtn" id="advancebtn">MORE OPTION</div>
+                <img src="./Images/down-arrow.png" alt="" class="up-arrow" id="arrow">
+            </div>
+        </div>
+        <div class="calculate">
+            <div class="price">
+                <span>CALCULATE OUTPUT....</span>
+                <div class="line"></div>
+                <div class="estimate">Fair Price Estimate</div>
+                <div id="show">₹58,776</div>
+                <div id="loading"><iframe src="https://giphy.com/embed/VseXvvxwowwCc" width="200" height="200"
+                        frameBorder="0"></iframe></div>
+            </div>
+            <div class="top"><span>ESTIMATED DIAMOND....</span>
+                <div class="line"></div>
+                <div class="estimate_dia">
+                    <img src="Images/Shapes/CUSHION.jpg" alt="" class="dia_img" id="shape_img">
+                    <div class="describe" id="img_des">
+                        <div class="details">
+                            <div class="prop ">
+                                <div>
+                                    <img src="/Images/properties/carat.png" alt="">
+                                    <div>Carat</div>
+                                </div>
+                                <div id="carat" class="cs">0.43</div>
+                            </div>
+                            <div class="prop ">
+                                <div>
+                                    <img src="/Images/properties/color.png" alt="">
+                                    <div>Colour</div>
+                                </div>
+                                <div id="color" class="cs">M</div>
+                            </div>
+                            <div class="prop ">
+                                <div>
+                                    <img src="/Images/properties/cut.png" alt="">
+                                    <div>Cut</div>
+                                </div>
+                                <div id="cut" class="cs">EX</div>
+                            </div>
+                            <div class="prop ">
+                                <div>
+                                    <img src="/Images/properties/clarity.png" alt="">
+                                    <div>Clarity</div>
+                                </div>
+                                <div id="clarity" class="cs">SI1</div>
+                            </div>
+
+                        </div>
+                        <div style="padding: 1rem;">
+                            <span id="dia_des">A cushion diamond is a square or rectangular-shaped diamond with rounded
+                                corners,
+                                resembling a pillow, known for its vintage appeal and brilliance.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
